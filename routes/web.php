@@ -14,7 +14,7 @@ Route::get('/collateral', [CreditController::class, 'step6'])->name('credit.step
 Route::get('/bank', [CreditController::class, 'step7'])->name('credit.step7');
 
 
-Route::post('/save', [CreditController::class, 'saveStep'])->name('save');
+Route::post('/save-step/{step}', [CreditController::class, 'saveStep'])->name('save');
 
 
 Route::post('/generate', [CreditController::class, 'generate'])->name('credit.generate');
